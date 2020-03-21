@@ -65,14 +65,14 @@ $("#searchBtn").on("click", function() {
     $('#currentCity').empty();
 
     // get and set the content 
-    const card = $("<div>").addClass("card");
-    const cardBody = $("<div>").addClass("card-body");
-    const city = $("<h4>").addClass("card-title").text(response.name);
-    const cityDate = $("<h4>").addClass("card-title").text(date.toLocaleDateString('en-US'));
-    const temperature = $("<p>").addClass("card-text current-temp").text("Temperature: " + tempF + " °F");
-    const humidity = $("<p>").addClass("card-text current-humidity").text("Humidity: " + response.main.humidity + "%");
-    const wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
-    const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
+    var card = $("<div>").addClass("card");
+    var cardBody = $("<div>").addClass("card-body");
+    var city = $("<h4>").addClass("card-title").text(response.name);
+    var cityDate = $("<h4>").addClass("card-title").text(date.toLocaleDateString('en-US'));
+    var temperature = $("<p>").addClass("card-text current-temp").text("Temperature: " + tempF + " °F");
+    var humidity = $("<p>").addClass("card-text current-humidity").text("Humidity: " + response.main.humidity + "%");
+    var wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + response.wind.speed + " MPH");
+    var image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png")
 
     // add to page
     city.append(cityDate, image)
